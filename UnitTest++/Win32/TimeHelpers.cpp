@@ -1,5 +1,7 @@
 #include "TimeHelpers.h"
 
+#ifdef UNITTEST_WIN32
+
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
@@ -47,3 +49,5 @@ void TimeHelpers::SleepMs(int ms)
 }
 
 }
+
+#endif	// UNITTEST_TIMEHELPERS_H

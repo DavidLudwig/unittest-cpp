@@ -2,6 +2,8 @@
 #define UNITTEST_TIMEHELPERS_H
 
 #include "../Config.h"
+
+#ifdef UNITTEST_WIN32
 #include "../HelperMacros.h"
 
 #ifdef UNITTEST_MINGW
@@ -42,4 +44,5 @@ namespace TimeHelpers
 
 }
 
-#endif
+#endif	// UNITTEST_WIN32
+#endif	// UNITTEST_TIMEHELPERS_H
