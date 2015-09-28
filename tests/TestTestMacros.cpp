@@ -140,7 +140,7 @@ TEST(FixturesWithThrowingCtorsAreFailures)
 // implicitly adds a 'noexcept' to all user defined 
 // destructors. Any exceptions thrown from destructors
 // cause abort() to be called on the process.
-#if(_MSC_VER < 1900)
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
 struct FixtureDtorThrows
 {
 	~FixtureDtorThrows() { throw "exception"; }
